@@ -7,5 +7,11 @@
   "repository": "https://github.com/dboston528/intro-to-heroku",
   "addons": [
     "heroku-postgresql"
-  ]
+  ],
+  "environments": {
+    "review": {
+      "addons": ["heroku-postgresql:mini"],
+       "scripts": {"heroku-prebuild": "echo This runs before Heroku installs dependencies."}
+      }
+  }
 }
